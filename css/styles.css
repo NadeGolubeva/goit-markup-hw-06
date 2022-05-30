@@ -243,10 +243,15 @@ letter-spacing: 0.01em;
 color: #757575;
 }
 
-.form-input:focus + .modal-label {
+.form-input:focus + .modal-label,
+.form-input:hover + .modal-label
+{
   color: var(--accent-color);
   
 }
+/* .comment:focus + .modal-label-comment {
+  color: var(--accent-color);
+} */
 .form-input:focus,
 .form-input:hover {
 cursor: pointer;
@@ -260,15 +265,22 @@ border-radius: 4px;
    top: 10px; 
   left: 15px; 
   fill: #212121;
-  background-color: #fff;
+  
 }
 
-/* .form-input:focus + form-icon,
-.form-input:hover + form-icon{
-background-color: var(--accent-color);
-fill: #ffffff;
+/* .form-input:focus ~ form-icon,
+.form-input:hover ~ form-icon{
+
+fill: var(--accent-color);
 } */
 
+/* textarea {
+  font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.01em;
+
+color: rgba(117, 117, 117, 0.5);
+background-color: #fff; */
 
   
 .form-label-text {
