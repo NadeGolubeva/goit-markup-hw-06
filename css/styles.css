@@ -141,17 +141,16 @@ outline: 1px solid red;}
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-   
+  z-index: 100;
   transition-property: opacity, visibility;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  
 }
 
 .modal-wrapper {
@@ -160,13 +159,12 @@ outline: 1px solid red;}
   left: 50%;
 
   padding: 40px;
-
+  margin: 0;
   transform: translate(-50%, -50%);
   width: 528px;
-  /* height: 581px; */
+
   border-radius: 4px;
   background-color: #ffffff;
-  
 
   /* transition-property: background-color;
   transition-duration: 250ms;
@@ -189,154 +187,216 @@ outline: 1px solid red;}
   border-radius: 50%;
   background-color: #fff;
   /* background-image: url(../icons/close.png); */
-  fill:#000000;
-  border-color: rgba(0, 0, 0, .1);
+  fill: #000000;
+  border-color: rgba(0, 0, 0, 0.1);
 }
-
+.modal-btn:hover,
+.modal-btn:focus {
+  fill: #2196f3;
+}
 /* 
 ===============
-Modal form 
+Modal form  div
 ===============
 */
 .form-title {
   display: block;
   text-align: center;
+  margin-top: 40px;
   margin-bottom: 34px;
 
   font-weight: 700;
-font-size: 20px;
-line-height: 1.15 ;
-text-align: center;
-letter-spacing: 0.03em;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-color: #212121;
+  color: #212121;
+}
+.modal-box {
+  /* display: flex; */
+  text-align: left;
 }
 .form-field {
   position: relative;
 }
 
 .form-input {
-  
   margin: 0;
-  padding: 11px;
   
+  padding: 11px 12px 11px 0px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
-font-size: 12px;
-line-height: 1.16;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.16;
 
-letter-spacing: 0.01em;
+  letter-spacing: 0.01em;
 
-color: #757575;
-width: 100%;
+  color: #757575;
+  width: 100%;
+  outline: none;
 
-transition-property: border;
+  transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-label {
-  position: absolute;
-  top: -19px;
-  left: 0px;
+  /* position: absolute;
+
+  top: -24px;
+  left: 0px; */
+
   font-size: 12px;
-line-height: 1.16;
+  line-height: 1.16;
 
-letter-spacing: 0.01em;
+  letter-spacing: 0.01em;
 
-color: #757575;
-transition-property: color;
+  color: #757575;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.form-input:focus + .modal-label,
-.form-input:hover + .modal-label
-{
+.form-field:focus-within .modal-label {
   color: var(--accent-color);
-  
 }
-/* .comment:focus + .modal-label-comment {
+
+/* .form-input:focus + .modal-label {
   color: var(--accent-color);
 } */
-.form-input:focus,
-.form-input:hover {
-cursor: pointer;
-border:  1px solid var(--accent-color);
-/* outline-offset: -2px; */
-border-radius: 4px;
-}
 
+.form-input:focus {
+  cursor: pointer;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
 
 .form-icon {
   position: absolute;
-   top: 10px; 
-  left: 15px; 
+  top: 50%;
+  left: 15px;
+
+  transform: translateX(-50%);
   fill: #212121;
-  
 }
-
-/* .form-input:focus ~ form-icon,
-.form-input:hover ~ form-icon{
-
-fill: var(--accent-color);
+.form-field:focus-within > .form-icon {
+  fill: var(--accent-color);
+}
+/* .form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
 } */
-
-/* textarea {
-  font-size: 14px;
-line-height: 16px;
-letter-spacing: 0.01em;
-
-color: rgba(117, 117, 117, 0.5);
-background-color: #fff; */
-
-
-  
-.form-label-text {
-  
- position: absolute;
-  top: -19px;
-  left: 0px;
-  
-font-size: 12px;
-line-height: 1.16;
-
-letter-spacing: 0.01em;
-
-color: #757575;
-}
+/* .comment {
+   position: relative;
+ } */
 
 .comment {
   width: 100%;
+  height: 120px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
+  border-radius: 4px;
+  /* padding-left: 0; */
 }
 .agreement-text {
   font-size: 14px;
-line-height: 1.71;
+  line-height: 1.71;
 
-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
 
-color: #757575;
+  color: #757575;
 }
 .accent-agreement {
   text-decoration-line: underline;
 
-color: #2196F3;
-}
-.form-input {
-  margin-bottom: 28px;
-  padding: 11px 12px 11px 30px;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
-  width: 100%;
+  color: #2196f3;
 }
 
-/* 
+.btn-form {
+  margin: 30px 164px 40px 164px;
+  padding: 10px 28px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+
+  border: #2196f3;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* ============== */
+/* .modal-box {
+  display: flex;
+  text-align: left;
+}
+.modal-label,
+.form-label-text,
+.label-checkbox, .comment,
+.modal-label-comment
+ {
+  display: block;
+ 
+} */
+/* .modal-label {
+  position: relative; 
+ 
+} */
+/* .form-label-text {
+  position: relative;
+ display: inline-block;
+  text-align: left;
+} */
+/* .form-icon {
+  position: absolute;
+   top: 0; 
+  left: 45px; */
+
+.label-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-checkbox {
+  width: 16px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  border: 1px solid #212121;
+
+  border-radius: 3px;
+}
+
+.checkbox {
+  appearance: none;
+}
+.stick-icon {
+  position: absolute;
+  top: 3px;
+  left: 16px;
+
+  opacity: 0;
+}
+
+.checkbox:checked + .custom-checkbox {
+  background-color: var(--accent-color);
+}
+.checkbox:checked + .stick-icon {
+  opacity: 1;
+}
+/*
 ===============
-previous vewrsion
+Modal form - lables - previous vewrsion
 ===============
 */
 /* 
@@ -344,23 +404,8 @@ previous vewrsion
   display: flex;
   text-align: left;
 }
-.form-title {
-  display: block;
-  text-align: center;
-  margin-bottom: 12px;
 
-  font-weight: 700;
-font-size: 20px;
-line-height: 1.15 ;
-text-align: center;
-letter-spacing: 0.03em;
 
-color: #212121;
-}
-
-.modal-form {
- width: 100%;
-}
 
 .modal-label,
 .form-label-text,
@@ -484,7 +529,6 @@ opacity: 1;
   line-height: 1.88;
   letter-spacing: 0.06em;
 }
-
 
 .btn {
   display: inline-block;
@@ -669,6 +713,7 @@ opacity: 1;
   color: #ffffff;
 
   background-color: rgba(47, 48, 58, 0.8);
+  z-index: 10;
 }
 
 /* Team */
@@ -752,7 +797,6 @@ opacity: 1;
 .social-link:focus {
   background-color: var(--accent-color);
   fill: white;
-  
 }
 /* Clients */
 
@@ -788,13 +832,11 @@ opacity: 1;
 .client-items:hover,
 .client-items:focus {
   border: 1px solid var(--accent-color);
-  
 }
 
 .client-link:hover,
 .client-link:focus {
   fill: var(--accent-color);
-  
 }
 
 /*  Our works Portfolio */
@@ -820,7 +862,6 @@ section {
   padding-bottom: 20px;
   padding-right: 24px;
   padding-left: 24px;
-  
 }
 .work-list {
   display: flex;
@@ -875,14 +916,11 @@ section {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  
 }
 .flex-element:hover,
 .flex-element:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
-  0px 4px 4px rgba(0, 0, 0, 0.06), 
-  1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 
   cursor: pointer;
 }
@@ -901,7 +939,6 @@ section {
   color: var(--white-color);
   cursor: pointer;
   box-shadow: 0px 2px 2px grey;
-
 }
 
 /* Декоративный оверлей */
@@ -913,11 +950,11 @@ section {
   margin: 0;
 
   background-color: transparent;
- overflow: hidden;
+  overflow: hidden;
 }
 
 .flex-element:hover .overlay-box {
-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .overlay-box {
@@ -928,20 +965,17 @@ transform: translateY(0);
   height: 100%;
 
   text-align: start;
-   padding: 63px 24px;
-  background-color: #2196F3;
+  padding: 63px 24px;
+  background-color: #2196f3;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 .overlay-box p {
-font-weight: 400;
-font-size: 18px;
-line-height: 1.56;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
 
-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
 
-color: #FFFFFF;
-
-
+  color: #ffffff;
 }

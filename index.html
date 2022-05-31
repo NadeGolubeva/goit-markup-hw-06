@@ -77,24 +77,23 @@
               <div class="modal-wrapper">
                 <button class="modal-btn" data-modal-close>
                   <svg width="11" height="11">
-                    <use href="../sprite.svg#icon-close-black"></use>
+                    <use href="./sprite.svg#icon-close-black"></use>
                   </svg>
                 </button>
 
-                <!-- Modal-form -->
-                <strong class="form-title"
+               <strong class="form-title"
                   >Оставьте свои данные, мы вам перезвоним</strong
                 >
                 <div class="modal-box">
                   <form class="modal-form">
                     <div class="form-field">
+                      <label class="modal-label" for="username">Имя</label>
                       <input
                         class="form-input"
                         type="text"
                         name="username"
                         id="username"
                       />
-                      <label class="modal-label" for="username">Имя</label>
                       <!-- <span class="form-label-text">Имя</span> -->
                       <svg class="form-icon" width="12" height="12">
                         <use href="./sprite.svg#icon-person"></use>
@@ -102,19 +101,20 @@
                     </div>
 
                     <div class="form-field">
+                      <label class="modal-label" for="tel">Телефон</label>
                       <input
                         class="form-input"
                         type="tel"
                         name="tel"
                         id="tel"
                       />
-                      <label class="modal-label" for="tel">Телефон</label>
                       <!-- <span class="form-label-text">Телефон</span> -->
                       <svg class="form-icon" width="13" height="13">
                         <use href="./sprite.svg#icon-phone"></use>
                       </svg>
                     </div>
                     <div class="form-field">
+                      <label class="modal-label" for="email">Почта</label>
                       <input
                         class="form-input"
                         type="email"
@@ -122,26 +122,25 @@
                         id="email"
                         
                       />
-                      <label class="modal-label" for="email">Почта</label>
                       <!-- <span class="form-label-text">Почта</span> -->
                       <svg class="form-icon" width="15" height="12">
                         <use href="./sprite.svg#icon-envelope-little"></use>
                       </svg>
                     </div>
                     <div class="form-field">
+                      <label class="modal-label" for="feedback">Комментарий
                       <textarea  
-                        class="comment"
+                        class="form-input comment"
                         name="feedback"
+                        placeholder="Введите текст"
                         id="feedback"
                         rows="5"
-                        placeholder="Введите текст"
                       >
                       </textarea>
-                      <label calss="modal-label-comment" for="feedback">
-                        <span class="form-label-text">Комментарий</span>
+                        <!-- <span class="form-label-text">Комментарий</span> -->
                       </label>
                     </div>
-
+ <div class="form-field">
                     <input
                       calss="checkbox hidden"
                       type="checkbox"
@@ -160,9 +159,10 @@
                         ></span
                       >
                     </label>
-
+</div>
                     <button class="btn-form" type="submit">Отправить</button>
                   </form>
+                </div>
                 </div>
               </div>
             </div>
@@ -696,20 +696,19 @@
           </ul>
         </div>
         <div class="contacts-form">
-          <h3 class="text">Подпишитесь на рассылку</h3>
+          <h3 class="title">Подпишитесь на рассылку</h3>
           <form class="footer-form" name="footer-form">
             <div class="footer-group">
-              <div class="footer-send">
-                <label class="label-footer" for="email-footer"
-                  >Email
+             
                   <input
                     class="send-input"
                     type="email"
                     name="email-footer"
                     id="email-footer"
-                /></label>
-              </div>
-              <button class="btn-form" type="submit" class="btn-footer">
+                    placeholder="E-mail"
+                />
+              
+              <button class="btn-form-footer" type="submit" class="btn-footer">
                 Подписаться
                 <svg class="send" width="24" height="24">
                   <use href="./sprite.svg#icon-send"></use>
@@ -718,7 +717,7 @@
             </div>
           </form>
         </div>
-      </div>
+      
     </footer>
     <script src="./js/modal.js"></script>
   </body>
