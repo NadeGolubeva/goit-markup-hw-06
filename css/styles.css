@@ -219,12 +219,13 @@ Modal form  div
 }
 .form-field {
   position: relative;
+  margin-bottom: 10px;
 }
 
 .form-input {
   margin: 0;
-  
-  padding: 11px 12px 11px 0px;
+  /* margin-bottom: 10px; */
+  padding: 11px 12px 11px 37px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -296,21 +297,9 @@ Modal form  div
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  /* padding-left: 0; */
+  padding-left: 15px;
 }
-.agreement-text {
-  font-size: 14px;
-  line-height: 1.71;
 
-  letter-spacing: 0.03em;
-
-  color: #757575;
-}
-.accent-agreement {
-  text-decoration-line: underline;
-
-  color: #2196f3;
-}
 
 .btn-form {
   margin: 30px 164px 40px 164px;
@@ -332,32 +321,7 @@ Modal form  div
   border-radius: 4px;
   cursor: pointer;
 }
-/* ============== */
-/* .modal-box {
-  display: flex;
-  text-align: left;
-}
-.modal-label,
-.form-label-text,
-.label-checkbox, .comment,
-.modal-label-comment
- {
-  display: block;
- 
-} */
-/* .modal-label {
-  position: relative; 
- 
-} */
-/* .form-label-text {
-  position: relative;
- display: inline-block;
-  text-align: left;
-} */
-/* .form-icon {
-  position: absolute;
-   top: 0; 
-  left: 45px; */
+
 
 .label-checkbox {
   position: relative;
@@ -366,6 +330,9 @@ Modal form  div
   justify-content: center;
 }
 .custom-checkbox {
+
+  position: absolute;
+  top: 4px;
   width: 16px;
   height: 15px;
   display: flex;
@@ -375,24 +342,59 @@ Modal form  div
   border: 1px solid #212121;
 
   border-radius: 3px;
+ transition-property: background-color, fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
+  
 }
 
 .checkbox {
-  appearance: none;
-}
+   -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+            position: absolute;
+  
+} 
+
 .stick-icon {
   position: absolute;
-  top: 3px;
-  left: 16px;
+  top: 4px;
+  left: 0px;
+  
 
   opacity: 0;
 }
+.agreement-text {
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.71;
 
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+.accent-agreement {
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center;
+  text-decoration-line: underline; */
+
+  color: #2196f3;
+}
 .checkbox:checked + .custom-checkbox {
   background-color: var(--accent-color);
+  /* fill: var(--accent-color); */
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-color);
+  
 }
-.checkbox:checked + .stick-icon {
+.checkbox:checked ~ .stick-icon {
   opacity: 1;
+  fill: #ffffff;
+  
 }
 /*
 ===============
