@@ -211,7 +211,12 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 /* Footer */
 
 .footer {
+  
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
   background-color: var(--secondary-bgc);
+ 
 }
 .footer .logo-color {
   color: var(--white-color);
@@ -244,11 +249,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
-.footer {
-  padding-top: 60px;
-  padding-bottom: 0px;
-  display: flex;
-}
+
 .footer-container {
   display: flex;
   margin: 0 auto;

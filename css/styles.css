@@ -202,8 +202,8 @@ Modal form  div
 .form-title {
   display: block;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 34px;
+  /* margin-top: 40px; */
+  margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
@@ -226,7 +226,7 @@ Modal form  div
   margin: 0;
   /* margin-bottom: 10px; */
   padding: 11px 12px 11px 37px;
-
+margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   font-size: 12px;
@@ -275,7 +275,7 @@ Modal form  div
 
 .form-icon {
   position: absolute;
-  top: 50%;
+  top: 56%;
   left: 15px;
 
   transform: translateX(-50%);
@@ -309,8 +309,13 @@ color: rgba(117, 117, 117, 0.5);
 }
 
 .btn-form {
-  margin: 30px 164px 40px 164px;
+  display: flex;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
   padding: 10px 28px;
+  width: 200px;
 
   font-weight: 700;
   font-size: 16px;
@@ -318,6 +323,7 @@ color: rgba(117, 117, 117, 0.5);
 
   align-items: center;
   text-align: center;
+  justify-content: center;
   letter-spacing: 0.06em;
 
   color: #ffffff;
@@ -340,6 +346,7 @@ color: rgba(117, 117, 117, 0.5);
 
   position: absolute;
   top: 4px;
+  left: 13px;
   width: 16px;
   height: 15px;
   display: flex;
@@ -366,13 +373,14 @@ color: rgba(117, 117, 117, 0.5);
 .stick-icon {
   position: absolute;
   top: 4px;
-  left: 0px;
+  left: 13px;
   
 
   opacity: 0;
 }
 .agreement-text {
  display: flex;
+ padding-left: 22px;
   align-items: center;
   justify-content: center;
   font-size: 14px;
@@ -403,120 +411,7 @@ color: rgba(117, 117, 117, 0.5);
   fill: #ffffff;
   
 }
-/*
-===============
-Modal form - lables - previous vewrsion
-===============
-*/
-/* 
-.modal-box {
-  display: flex;
-  text-align: left;
-}
 
-
-
-.modal-label,
-.form-label-text,
-.label-checkbox, .comment,
-.modal-label-comment
- {
-  display: block;
- 
-}
-
-.modal-label {
-  position: relative; 
- 
-}
-
-
-.form-label-text {
-  position: relative;
- display: inline-block;
-  text-align: left;
-  
-font-size: 12px;
-line-height: 1.16;
-
-letter-spacing: 0.01em;
-
-color: #757575;
-}
-.form-input {
-  
-  padding: 11px 12px 11px 30px;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
-  width: 100%;
-}
-.form-icon {
-  position: absolute;
-   top: 0; 
-  left: 45px;
-  
-  fill: #212121;
-}
-
-
-.comment {
-  width: 100%;
-  resize: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
-}
-.agreement-text {
-  font-size: 14px;
-line-height: 1.71;
-
-letter-spacing: 0.03em;
-
-color: #757575;
-}
-.accent-agreement {
-  text-decoration-line: underline;
-
-color: #2196F3;
-}
-
-
-
-.label-checkbox {
-  position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.custom-checkbox {
-
-width: 16px;
-  height: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 8px;
-  border: 1px solid #212121;
- 
-  border-radius: 3px;
-}
-.stick-icon {
-  
-  position: absolute;
-  top: 3px;
-  left: 16px;
-
-opacity: 1;
-
-
-}
-
-.checkbox:checked+.custom-checkbox {
-  background-color: var(--accent-color);
-}
-.checkbox:checked+.custom-checkbox .stick-icon {
-opacity: 1;
-} */
 
 /* Button */
 
